@@ -34,7 +34,8 @@ export default {
 
 <style lang="less">
 .el-header {
-  background-color: rgb(34, 114, 205);
+  background-color: #409EFF;
+  height: 30px;
 }
 .el-main {
   padding-top: 0;
