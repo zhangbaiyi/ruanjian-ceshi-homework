@@ -8,6 +8,7 @@
       :collapse="isCollapse"
     >
       <el-menu-item
+        @click="clickMenu(item)"
         v-for="item in noChildren"
         :index="item.path"
         :key="item.path"
@@ -20,8 +21,8 @@
           <i :class="'el-icon-'+item.icon"></i>
           <span slot="title">{{item.label}}</span>
         </template>
-        <el-menu-item-group v-for="(subItem, subIndex) in item.children" :key="subItem.path">
-          <el-menu-item :index="subIndex">{{subItem.label}}</el-menu-item>
+        <el-menu-item-group  v-for="(subItem, subIndex) in item.children" :key="subItem.path">
+          <el-menu-item @click="clickMenu(subItem)" :index="subIndex">{{subItem.label}}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -46,25 +47,25 @@ export default {
           name: "HomeView",
           label: "首页",
           icon: "s-home",
-          url: "Home",
+          url: "home",
         },
         {
           label: "三角形问题",
-          icon: "caret-right",
+          icon: "d-caret",
           children: [
             {
-              path: "/triangletest-manual",
-              name: "trimanual",
+              path: "/triangle-manual",
+              name: "TriangleManualView",
               label: "手动输入测试",
               icon: "edit-outline",
-              url: "Triangle/manual",
+              url: "triangle-manual",
             },
             {
-              path: "/triangletest-file",
-              name: "trifile",
+              path: "/triangle-file",
+              name: "TriangleFileView",
               label: "文件输入测试",
               icon: "edit-document-checked",
-              url: "Triangle/file",
+              url: "triangle-file",
             },
           ],
         },
@@ -78,6 +79,12 @@ export default {
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
+    clickMenu(item){
+      console.log(item.name);
+      this.$router.push({
+        name: item.name
+      })
+    }
   },
   computed: {
     noChildren() {

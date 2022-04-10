@@ -1,14 +1,30 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import HomeView from '../views/HomeView.vue'
 
 Vue.use(VueRouter)
 
 const routes = [
   {
     path: '/',
-    name: 'home',
-    component: HomeView
+    name: 'MainView',
+    component: () => import('../views/MainView.vue'),
+    children: [
+      {
+        path: '/home',
+        name: 'HomeView',
+        component: () => import('../views/home')
+      },
+      {
+        path: '/triangle-manual',
+        name: 'TriangleManualView',
+        component: () => import('../views/triangle-manual')
+      },
+      {
+        path: '/triangle-file',
+        name: 'TriangleFileView',
+        component: () => import('../views/triangle-file')
+      }
+    ]
   },
   {
     path: '/about',
