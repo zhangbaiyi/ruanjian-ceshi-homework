@@ -23,6 +23,11 @@ const routes = [
         path: '/triangle-file',
         name: 'TriangleFileView',
         component: () => import('../views/triangle-file')
+      },
+      {
+        path: '/calendar-manual',
+        name: 'CalendarManualView',
+        component: () => import('../views/calendar-manual')
       }
     ]
   },

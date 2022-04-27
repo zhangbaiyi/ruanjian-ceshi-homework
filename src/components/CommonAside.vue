@@ -16,13 +16,22 @@
         <i :class="'el-icon-' + item.icon"></i>
         <span slot="title">{{ item.label }}</span>
       </el-menu-item>
-      <el-submenu v-for="item in hasChildren" :index="item.path" :key="item.path">
+      <el-submenu
+        v-for="item in hasChildren"
+        :index="item.path"
+        :key="item.path"
+      >
         <template slot="title">
-          <i :class="'el-icon-'+item.icon"></i>
-          <span slot="title">{{item.label}}</span>
+          <i :class="'el-icon-' + item.icon"></i>
+          <span slot="title">{{ item.label }}</span>
         </template>
-        <el-menu-item-group  v-for="(subItem, subIndex) in item.children" :key="subItem.path">
-          <el-menu-item @click="clickMenu(subItem)" :index="subIndex">{{subItem.label}}</el-menu-item>
+        <el-menu-item-group
+          v-for="(subItem, subIndex) in item.children"
+          :key="subItem.path"
+        >
+          <el-menu-item @click="clickMenu(subItem)" :index="subIndex">{{
+            subItem.label
+          }}</el-menu-item>
         </el-menu-item-group>
       </el-submenu>
     </el-menu>
@@ -51,21 +60,41 @@ export default {
         },
         {
           label: "三角形问题",
-          icon: "d-caret",
+          icon: "s-promotion",
           children: [
             {
               path: "/triangle-manual",
               name: "TriangleManualView",
-              label: "手动输入测试",
+              label: "三角形手动输入测试",
               icon: "edit-outline",
               url: "triangle-manual",
             },
             {
               path: "/triangle-file",
               name: "TriangleFileView",
-              label: "文件输入测试",
+              label: "三角形文件输入测试",
               icon: "edit-document-checked",
               url: "triangle-file",
+            },
+          ],
+        },
+        {
+          label: "万年历问题",
+          icon: "date",
+          children: [
+            {
+              path: "/calendar-manual",
+              name: "CalendarManualView",
+              label: "万年历手动输入测试",
+              icon: "edit-outline",
+              url: "calendar-manual",
+            },
+            {
+              path: "/calendar-file",
+              name: "CalendarFileView",
+              label: "万年历文件输入测试",
+              icon: "edit-document-checked",
+              url: "calendar-file",
             },
           ],
         },
@@ -73,18 +102,19 @@ export default {
     };
   },
   methods: {
+    
     handleOpen(key, keyPath) {
       console.log(key, keyPath);
     },
     handleClose(key, keyPath) {
       console.log(key, keyPath);
     },
-    clickMenu(item){
+    clickMenu(item) {
       console.log(item.name);
       this.$router.push({
-        name: item.name
-      })
-    }
+        name: item.name,
+      });
+    },
   },
   computed: {
     noChildren() {
