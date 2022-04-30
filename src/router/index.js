@@ -15,30 +15,18 @@ const routes = [
         component: () => import('../views/home')
       },
       {
-        path: '/triangle-manual',
-        name: 'TriangleManualView',
-        component: () => import('../views/triangle-manual')
+        path: '/triangle',
+        name: 'TriangleView',
+        component: () => import('../views/triangle')
       },
       {
-        path: '/triangle-file',
-        name: 'TriangleFileView',
-        component: () => import('../views/triangle-file')
+        path: '/calendar',
+        name: 'CalendarView',
+        component: () => import('../views/calendar')
       },
-      {
-        path: '/calendar-manual',
-        name: 'CalendarManualView',
-        component: () => import('../views/calendar-manual')
-      }
     ]
   },
-  {
-    path: '/about',
-    name: 'about',
-    // route level code-splitting
-    // this generates a separate chunk (about.[hash].js) for this route
-    // which is lazy-loaded when the route is visited.
-    component: () => import(/* webpackChunkName: "about" */ '../views/AboutView.vue')
-  }
+
 ]
 
 const router = new VueRouter({

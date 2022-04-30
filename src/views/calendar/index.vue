@@ -1,54 +1,126 @@
 <template>
-  <el-row :gutter="20">
-    <h2>判断三角形类型</h2>
-    <h1>请上传测试文件</h1>
-    <el-col :span="8">
-      <div class="tri-file">
-        <el-upload
-          class="upload-demo"
-          drag
-          action="api/triangle/custom"
-          :before-upload="beforeFileUpload"
-          :on-remove="handleRemove"
-          :file-list="fileList"
-          :on-change="handleChange"
-          :on-success="handle_file"
-        >
-          <i class="el-icon-upload"></i>
-          <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-          <div class="el-upload__tip" slot="tip">
-            只能上传CSV文件且不超过500kb
+  <div class="calendar">
+    <h2>万年历问题</h2>
+    <div class="calendar-manual">
+      <h1>输入日期，查看下一天</h1>
+
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <div class="grid-content">
+            <el-input
+              placeholder="年"
+              v-model="form.year"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input>
           </div>
-        </el-upload>
-        <el-row :gutter="20">
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-          <el-col :span="6"
-            ><div class="grid-content bg-purple">
-              <el-button
-                size="mini"
-                :disabled="btnChangeEnable"
-                @click="getFileSrc()"
-                round
-                >Download Result</el-button
+        </el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-input
+              placeholder="月"
+              v-model="form.month"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input></div
+        ></el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-input
+              placeholder="日"
+              v-model="form.day"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input></div
+        ></el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-button
+              @click="submitCal()"
+              type="primary"
+              class="cal_manual_submit"
+              >测试</el-button
+            >
+          </div></el-col
+        >
+      </el-row>
+      <el-row>
+        <el-col :span="24"
+          ><div class="grid-content-res">
+            您所输入日期的下一天是：{{ output }}
+          </div></el-col
+        >
+      </el-row>
+    </div>
+    <div class="calendar-file">
+      <h1>请上传测试文件</h1>
+      <el-row :gutter="20">
+        <el-col :span="8">
+          <div class="cal-file">
+            <el-upload
+              class="upload-demo"
+              drag
+              action="api/calendar/custom"
+              :before-upload="beforeFileUpload"
+              :on-remove="handleRemove"
+              :file-list="fileList"
+              :on-change="handleChange"
+              :on-success="handle_file"
+            >
+              <i class="el-icon-upload"></i>
+              <div class="el-upload__text">
+                将文件拖到此处，或<em>点击上传</em>
+              </div>
+              <div class="el-upload__tip" slot="tip">
+                只能上传CSV文件且不超过500kb
+              </div>
+            </el-upload>
+            <el-row :gutter="20">
+              <el-col :span="6"
+                ><div class="grid-content bg-purple">
+                  <el-button
+                    size="mini"
+                    :disabled="btnChangeEnable"
+                    @click="getFileSrc()"
+                    round
+                    >Download Result</el-button
+                  >
+                </div></el-col
               >
-            </div></el-col
-          >
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        </el-row>
-      </div>
-    </el-col>
-    <el-col :span="12">
-      <div id="tri-chart"></div>
-    </el-col>
-  </el-row>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+            </el-row>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div id="cal-chart"></div>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "CalendarFileView",
+  name: "CalendarView",
   data() {
     return {
+      form: {
+        year: 2022,
+        month: 5,
+        day: 1,
+      },
+      output: "【请点击测试按钮】",
       chartInstance: null,
       btnChangeEnable: true,
       result: {
@@ -60,8 +132,13 @@ export default {
       fileList: null,
     };
   },
-
   methods: {
+    submitCal() {
+      this.$http.post("api/calendar/basic", this.form).then((res) => {
+        console.log(res);
+        this.output = res.data;
+      });
+    },
     beforeFileUpload(file) {
       const isCSV = file.type === "text/csv";
       const isLt500K = file.size / 1024 / 1024 < 0.5;
@@ -94,7 +171,7 @@ export default {
     getFileSrc() {
       console.log(this.file.name);
       this.$http({
-        url: "api/triangle/download/" + this.file.name,
+        url: "api/calendar/download/" + this.file.name,
         method: "GET",
       })
         .then((res) => {
@@ -119,7 +196,7 @@ export default {
     },
     init_chart() {
       this.chartInstance = this.$echarts.init(
-        document.getElementById("tri-chart")
+        document.getElementById("cal-chart")
       );
     },
     update_chart() {
@@ -131,7 +208,7 @@ export default {
       piePatternImg.src = piePatternSrc;
       const option = {
         title: {
-          text: "Accuracy: " + this.result.accuracy.toFixed(2) + "%",
+          text: "通过率：" + this.result.accuracy.toFixed(2) + "%",
           textStyle: {
             color: "#235894",
           },
@@ -139,7 +216,7 @@ export default {
         tooltip: {},
         series: [
           {
-            name: "Test Result",
+            name: "测试结果",
             type: "pie",
             selectedMode: "single",
             selectedOffset: 30,
@@ -154,8 +231,8 @@ export default {
               },
             },
             data: [
-              { value: trueValue, name: "Passed" },
-              { value: falseValue, name: "Not Passed" },
+              { value: trueValue, name: "通过" },
+              { value: falseValue, name: "未通过" },
             ],
             itemStyle: {
               opacity: 0.7,
@@ -175,9 +252,23 @@ export default {
 };
 </script>
 
-<style scoped>
-#tri-chart {
+<style >
+.grid-content-res {
+  padding: 10px;
+  color: #409eff;
+  font: bold;
+  font-size: larger;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  border: dashed #409eff;
+}
+
+#cal-chart {
   height: 450px;
+}
+
+.calendar-manual {
+    padding-bottom: 30px;
 }
 
 .el-row {
@@ -193,9 +284,11 @@ export default {
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
+  padding: 8px;
 }
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
 }
 </style>
+

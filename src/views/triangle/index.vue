@@ -1,54 +1,126 @@
 <template>
-  <el-row :gutter="20">
+  <div class="triangle">
     <h2>判断三角形类型</h2>
-    <h1>请上传测试文件</h1>
-    <el-col :span="8">
-      <div class="tri-file">
-        <el-upload
-          class="upload-demo"
-          drag
-          action="api/triangle/custom"
-          :before-upload="beforeFileUpload"
-          :on-remove="handleRemove"
-          :file-list="fileList"
-          :on-change="handleChange"
-          :on-success="handle_file"
-        >
-          <i class="el-icon-upload"></i>
-          <div class="el-upload__text">将文件拖到此处，或<em>点击上传</em></div>
-          <div class="el-upload__tip" slot="tip">
-            只能上传CSV文件且不超过500kb
+    <div class="triangle-manual">
+      <h1>手动输入三角形的三边</h1>
+
+      <el-row :gutter="20">
+        <el-col :span="6">
+          <div class="grid-content">
+            <el-input
+              placeholder="请输入第一条边"
+              v-model="form.edge1"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input>
           </div>
-        </el-upload>
-        <el-row :gutter="20">
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-          <el-col :span="6"
-            ><div class="grid-content bg-purple">
-              <el-button
-                size="mini"
-                :disabled="btnChangeEnable"
-                @click="getFileSrc()"
-                round
-                >Download Result</el-button
+        </el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-input
+              placeholder="请输入第二条边"
+              v-model="form.edge2"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input></div
+        ></el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-input
+              placeholder="请输入第三条边"
+              v-model="form.edge3"
+              type="number"
+            >
+              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
+            </el-input></div
+        ></el-col>
+        <el-col :span="6"
+          ><div class="grid-content">
+            <el-button
+              @click="submitTri()"
+              type="primary"
+              class="tri_manual_submit"
+              >测试</el-button
+            >
+          </div></el-col
+        >
+      </el-row>
+      <el-row>
+        <el-col :span="24"
+          ><div class="grid-content-res">
+            判断三角形类型测试结果为：{{ output }}
+          </div></el-col
+        >
+      </el-row>
+    </div>
+    <div class="triangle-file">
+      <h1>请上传测试文件</h1>
+      <el-row :gutter="20">
+        <el-col :span="8">
+          <div class="tri-file">
+            <el-upload
+              class="upload-demo"
+              drag
+              action="api/triangle/custom"
+              :before-upload="beforeFileUpload"
+              :on-remove="handleRemove"
+              :file-list="fileList"
+              :on-change="handleChange"
+              :on-success="handle_file"
+            >
+              <i class="el-icon-upload"></i>
+              <div class="el-upload__text">
+                将文件拖到此处，或<em>点击上传</em>
+              </div>
+              <div class="el-upload__tip" slot="tip">
+                只能上传CSV文件且不超过500kb
+              </div>
+            </el-upload>
+            <el-row :gutter="20">
+              <el-col :span="6"
+                ><div class="grid-content bg-purple">
+                  <el-button
+                    size="mini"
+                    :disabled="btnChangeEnable"
+                    @click="getFileSrc()"
+                    round
+                    >Download Result</el-button
+                  >
+                </div></el-col
               >
-            </div></el-col
-          >
-          <el-col :span="6"><div class="grid-content bg-purple"></div></el-col>
-        </el-row>
-      </div>
-    </el-col>
-    <el-col :span="12">
-      <div id="tri-chart"></div>
-    </el-col>
-  </el-row>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+              <el-col :span="6"
+                ><div class="grid-content bg-purple"></div
+              ></el-col>
+            </el-row>
+          </div>
+        </el-col>
+        <el-col :span="12">
+          <div id="tri-chart"></div>
+        </el-col>
+      </el-row>
+    </div>
+  </div>
 </template>
 
 <script>
 export default {
-  name: "CalendarFileView",
+  name: "TriangleView",
   data() {
     return {
+      form: {
+        edge1: "3",
+        edge2: "4",
+        edge3: "5",
+      },
+      output: "【请点击测试按钮】",
       chartInstance: null,
       btnChangeEnable: true,
       result: {
@@ -60,8 +132,13 @@ export default {
       fileList: null,
     };
   },
-
   methods: {
+    submitTri() {
+      this.$http.post("api/triangle/basic", this.form).then((res) => {
+        console.log(res);
+        this.output = res.data;
+      });
+    },
     beforeFileUpload(file) {
       const isCSV = file.type === "text/csv";
       const isLt500K = file.size / 1024 / 1024 < 0.5;
@@ -139,7 +216,7 @@ export default {
         tooltip: {},
         series: [
           {
-            name: "Test Result",
+            name: "测试结果",
             type: "pie",
             selectedMode: "single",
             selectedOffset: 30,
@@ -154,8 +231,8 @@ export default {
               },
             },
             data: [
-              { value: trueValue, name: "Passed" },
-              { value: falseValue, name: "Not Passed" },
+              { value: trueValue, name: "通过" },
+              { value: falseValue, name: "未通过" },
             ],
             itemStyle: {
               opacity: 0.7,
@@ -175,9 +252,23 @@ export default {
 };
 </script>
 
-<style scoped>
+<style >
+.grid-content-res {
+  padding: 10px;
+  color: #409eff;
+  font: bold;
+  font-size: larger;
+  border-radius: 4px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.12);
+  border: dashed #409eff;
+}
+
 #tri-chart {
   height: 450px;
+}
+
+.triangle-manual {
+    padding-bottom: 30px;
 }
 
 .el-row {
@@ -193,9 +284,11 @@ export default {
 .grid-content {
   border-radius: 4px;
   min-height: 36px;
+  padding: 8px;
 }
 .row-bg {
   padding: 10px 0;
   background-color: #f9fafc;
 }
 </style>
+
