@@ -75,7 +75,7 @@
                 将文件拖到此处，或<em>点击上传</em>
               </div>
               <div class="el-upload__tip" slot="tip">
-                只能上传CSV文件且不超过500kb
+                提示：只能上传CSV文件且不超过500kb
               </div>
             </el-upload>
             <el-row :gutter="20">
@@ -86,7 +86,7 @@
                     :disabled="btnChangeEnable"
                     @click="getFileSrc()"
                     round
-                    >Download Result</el-button
+                    >下载测试结果</el-button
                   >
                 </div></el-col
               >
@@ -183,7 +183,7 @@ export default {
           let a = document.createElement("a");
           a.style.display = "none";
           a.href = url;
-          a.setAttribute("download", "result.csv");
+          a.setAttribute("download", this.file.name.substring(0, this.file.name.lastIndexOf("."))+"_result.csv");
           document.body.appendChild(a);
           a.click(); //执行下载
           window.URL.revokeObjectURL(a.href);
@@ -208,7 +208,7 @@ export default {
       piePatternImg.src = piePatternSrc;
       const option = {
         title: {
-          text: "通过率：" + this.result.accuracy.toFixed(2) + "%",
+          text: "通过率：" + this.result.accuracy.toFixed(2),
           textStyle: {
             color: "#235894",
           },
@@ -277,6 +277,7 @@ export default {
     margin-bottom: 0;
   }
 }
+
 .el-col {
   border-radius: 4px;
 }

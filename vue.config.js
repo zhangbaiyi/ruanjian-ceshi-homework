@@ -7,7 +7,7 @@ module.exports = {
         args[0].title= '《软件测试》练习题'
         return args
       })
-  }，
+  },
   devServer:{
     proxy:{
       '/api':{
