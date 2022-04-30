@@ -1,7 +1,7 @@
 <template>
   <header>
     <div class="l-content">
-      <h2>Software Testing Platform @TongjiSSE - 2022Spring</h2>
+      <h2>《软件测试》练习题演示平台</h2>
     </div>
   </header>
 </template>
