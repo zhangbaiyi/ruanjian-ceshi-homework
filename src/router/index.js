@@ -24,6 +24,16 @@ const routes = [
         name: 'CalendarView',
         component: () => import('../views/calendar')
       },
+      {
+        path: '/computer',
+        name: 'ComputerView',
+        component: () => import('../views/computer')
+      },
+      {
+        path: '/charge',
+        name: 'ChargeView',
+        component: () => import('../views/charge')
+      },
     ]
   },
 

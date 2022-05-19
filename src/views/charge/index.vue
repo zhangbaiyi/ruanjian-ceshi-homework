@@ -1,69 +1,16 @@
 <template>
-  <div class="calendar">
-    <h2>万年历问题</h2>
-    <div class="calendar-manual">
-      <h1>输入日期，查看下一天</h1>
-
-      <el-row :gutter="20">
-        <el-col :span="6">
-          <div class="grid-content">
-            <el-input
-              placeholder="年"
-              v-model.number="form.year"
-              type="number"
-            >
-              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
-            </el-input>
-          </div>
-        </el-col>
-        <el-col :span="6"
-          ><div class="grid-content">
-            <el-input
-              placeholder="月"
-              v-model.number="form.month"
-              type="number"
-            >
-              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
-            </el-input></div
-        ></el-col>
-        <el-col :span="6"
-          ><div class="grid-content">
-            <el-input
-              placeholder="日"
-              v-model.number="form.day"
-              type="number"
-            >
-              <i slot="prefix" class="el-input__icon el-icon-edit"></i>
-            </el-input></div
-        ></el-col>
-        <el-col :span="6"
-          ><div class="grid-content">
-            <el-button
-              @click="submitCal()"
-              type="primary"
-              class="cal_manual_submit"
-              >测试</el-button
-            >
-          </div></el-col
-        >
-      </el-row>
-      <el-row>
-        <el-col :span="24"
-          ><div class="grid-content-res">
-            您所输入日期的下一天是：{{ output }}
-          </div></el-col
-        >
-      </el-row>
-    </div>
-    <div class="calendar-file">
+  <div class="charge">
+    <h2>电信收费问题</h2>
+    
+    <div class="charge-file">
       <h1>请上传测试文件</h1>
       <el-row :gutter="20">
         <el-col :span="8">
-          <div class="cal-file">
+          <div class="com-file">
             <el-upload
               class="upload-demo"
               drag
-              action="api/calendar/custom"
+              action="api/charge/custom"
               :before-upload="beforeFileUpload"
               :on-remove="handleRemove"
               :file-list="fileList"
@@ -103,7 +50,7 @@
           </div>
         </el-col>
         <el-col :span="12">
-          <div id="cal-chart"></div>
+          <div id="charge-chart"></div>
         </el-col>
       </el-row>
     </div>
@@ -112,7 +59,7 @@
 
 <script>
 export default {
-  name: "CalendarView",
+  name: "ComputerView",
   data() {
     return {
       form: {
@@ -134,12 +81,6 @@ export default {
   },
   methods: {
 
-    submitCal() {
-      this.$http.post("api/calendar/basic", this.form).then((res) => {
-        console.log(res);
-        this.output = res.data;
-      });
-    },
     beforeFileUpload(file) {
       const isCSV = file.type === "text/csv";
       const isLt500K = file.size / 1024 / 1024 < 0.5;
@@ -172,7 +113,7 @@ export default {
     getFileSrc() {
       console.log(this.file.name);
       this.$http({
-        url: "api/calendar/download/" + this.file.name,
+        url: "api/charge/download/" + this.file.name,
         method: "GET",
       })
         .then((res) => {
@@ -197,7 +138,7 @@ export default {
     },
     init_chart() {
       this.chartInstance = this.$echarts.init(
-        document.getElementById("cal-chart")
+        document.getElementById("charge-chart")
       );
     },
     update_chart() {
@@ -264,11 +205,11 @@ export default {
   border: dashed #409eff;
 }
 
-#cal-chart {
+#charge-chart {
   height: 450px;
 }
 
-.calendar-manual {
+.charge-manual {
     padding-bottom: 30px;
 }
 

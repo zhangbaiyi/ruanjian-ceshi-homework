@@ -44,6 +44,20 @@ export default {
           icon: "date",
           url: "calendar",
         },
+        {
+          path: "/computer",
+          name: "ComputerView",
+          label: "电脑销售问题",
+          icon: "cpu",
+          url: "computer",
+        },
+                {
+          path: "/charge",
+          name: "ChargeView",
+          label: "电信收费问题",
+          icon: "mobile-phone",
+          url: "charge",
+        },
       ],
     };
   },
