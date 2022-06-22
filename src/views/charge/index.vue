@@ -1,9 +1,9 @@
 <template>
   <div class="charge">
-    <h2>电信收费问题</h2>
+    <h1>电信收费问题</h1>
     
     <div class="charge-file">
-      <h1>请上传测试文件</h1>
+      <h2>请上传测试文件</h2>
       <el-row :gutter="20">
         <el-col :span="8">
           <div class="com-file">

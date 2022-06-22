@@ -9,9 +9,11 @@
       <el-header>
         <common-header></common-header>
       </el-header>
+
       <el-main>
         <router-view></router-view>
       </el-main>
+     
     </el-container>
   </el-container>
 </template>

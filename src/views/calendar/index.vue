@@ -1,8 +1,8 @@
 <template>
   <div class="calendar">
-    <h2>万年历问题</h2>
+    <h1>万年历问题</h1>
     <div class="calendar-manual">
-      <h1>输入日期，查看下一天</h1>
+      <h2>输入日期，查看下一天</h2>
 
       <el-row :gutter="20">
         <el-col :span="6">

@@ -1,8 +1,8 @@
 <template>
   <div class="triangle">
-    <h2>判断三角形类型</h2>
+    <h1>判断三角形类型</h1>
     <div class="triangle-manual">
-      <h1>手动输入三角形的三边</h1>
+      <h2>手动输入三角形的三边</h2>
 
       <el-row :gutter="20">
         <el-col :span="6">

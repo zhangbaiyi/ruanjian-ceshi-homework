@@ -24,7 +24,7 @@ export default {
     return {
       menu: [
         {
-          path: "/",
+          path: "/home",
           name: "HomeView",
           label: "首页",
           icon: "s-home",
