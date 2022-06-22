@@ -6,76 +6,7 @@
     <body class='typora-export os-windows'>
       <div class='typora-export-content'>
         <div id='write' class=''>
-          <h2 id='overview'><span>Overview</span></h2>
-          <p><span>标红题目为代码实现，对应位置粘贴运行截图和用例CSV截图</span></p>
-          <figure>
-            <table>
-              <thead>
-                <tr>
-                  <th><span>题号</span></th>
-                  <th><span>1</span></th>
-                  <th><span>2</span></th>
-                  <th><span>3</span></th>
-                  <th><span>4</span></th>
-                  <th><span>5</span></th>
-                  <th><span>6</span></th>
-                  <th><span>7</span></th>
-                  <th><span>8</span></th>
-                  <th><span>9</span></th>
-                  <th><span>10</span></th>
-                  <th><span>11</span></th>
-                  <th><span>12</span></th>
-                  <th><span>13</span></th>
-                  <th><span>14</span></th>
-                  <th><span>15</span></th>
-                  <th><span>16</span></th>
-                  <th><span>17</span></th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td><span>完成情况</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                  <td><span>√</span></td>
-                </tr>
-                <tr>
-                  <td><span>分工情况</span></td>
-                  <td><span>-</span></td>
-                  <td><span>-</span></td>
-                  <td><span>hky</span></td>
-                  <td><span>-</span></td>
-                  <td><span>yxj</span></td>
-                  <td><span>-</span></td>
-                  <td><span>-</span></td>
-                  <td><span>hky</span></td>
-                  <td><span>-</span></td>
-                  <td><span>-</span></td>
-                  <td><span>-</span></td>
-                  <td><span>lty</span></td>
-                  <td><span>zby</span></td>
-                  <td><span>lty</span></td>
-                  <td><span>lty</span></td>
-                  <td><span>zby</span></td>
-                  <td><span>yxj</span></td>
-                </tr>
-              </tbody>
-            </table>
-          </figure>
+          
           <h2 id='讨论题'><span>讨论题</span></h2>
           <h3 id='销售管理系统第三题）'><span>销售管理系统（第三题）</span></h3>
           <p>
@@ -149,11 +80,11 @@
           <p><span>构建ATM系统的state transition diagram, 利用state transition testing方法将其转换成transition tree，而后基于transition
               tree的路径设计测试用例，要考虑robustness。</span></p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=ODMwNzIzNDUyYjE5MTM2MTZlNjYxYjcxYTNkYTAyZGNfdFNmamdoWHdKSXF0V1BKNWNkSklrWWlRN29KTmd2SFRfVG9rZW46Ym94Y25VQkpkTHo2S0dVNmxLc25lbWttZlhlXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/1.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <p>&nbsp;</p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MmVhZTMzN2UzMzBlYzZiNzc4OWQwZjhjMmJlN2U3YmFfdVREeGh0SGFWTTRPajlFWUcxcXdKSjc3cDBkSnVmT2RfVG9rZW46Ym94Y25PVWlVT1ZlUkpiV2JWMzM3UGMyWXBnXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/2.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <p>&nbsp;</p>
           <p>&nbsp;</p>
@@ -163,11 +94,11 @@
           <p><span>下图是ERP系统的流图，根据系统需求和流程图，归纳出比较清晰的主、备选流关系图，并基于主、备选流设计场景和相应的测试用例。MPS（ Master Production
               Schedule），MRP(Manufacturing Resource Planning)</span></p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MjNiMzg4MmZjZDkzN2IzNDA4OTNkMTYxMGI4ODJmMzhfV0ZpVG1UcFFMSTJVV0ZSMGZkeGlDR0tjQ3REWUpRVTZfVG9rZW46Ym94Y25WU2Qwelh2SnFrRkh3T3hERHNoTG1kXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/3.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <p><strong><span>基本流如下：</span></strong></p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NjA3ODNiYWFmZDA4YjgzYzk5MTBhYzE2ODE3MTgyMGZfYlNwUWt2R1RQcW1XbjJSY252RkV0Y04zRUF2TGdqcndfVG9rZW46Ym94Y25SR3RwcUZKYXZOQzkzZVJGcjVPUmdoXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/4.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <p>&nbsp;</p>
           <p><span>本用例的开端是销售合同的产生。</span></p>
@@ -194,7 +125,7 @@
           </ol>
           <p><strong><span>备选流如下：</span></strong></p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTMxY2Y2YjEzYjAxOWFhOTQwYWZkYTg0MjFkNjhhNmNfTkIydDBENDdWcHJKWnYwM2ptb3l2dnhJcjFRV3RBNXJfVG9rZW46Ym94Y25sbVRaNGtIdFI3b3JBMzQxMnV2T2FjXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/5.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <figure>
             <table>
@@ -368,7 +299,7 @@
             <span>某实时的Web系统，服务器端应用程序需要接受客户端发送的不同类型的数据包，为了使系统设计达到最优，使用统一接口，接口（通用包）描述为：接口包的类型：正常交易包、查询包、退货包、换货包、部分退货包、部分换货包；涉及的商品种类：1、2、3、4、5、6；支付类型：系统账户余额支付、货到付款、工行账户支付、农行账户支付、建行账户支付、交行账户支付、邮储账户支付、礼品卡支付；发票类型：日用品、电脑配件、鞋、帽、家电、服装、电脑、ipad、手机、化妆品、食品、其他；支付金额：货到付款无限制、银行支付不能超出最大限额2万、系统账户余额支付不能超出余额；订单状态：正在处理、正在送货、处理完成、订单取消。用正交实验法设计用例。</span>
           </p>
           <p><img
-              src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NWQyYmFhNjdjMzk1MzU4MDUyYzkwY2ExZDVkZmY1Y2Vfd2xUc2FKdWZGeGhET2tpVGh5N3hSY2J4Rmc4Zm40THVfVG9rZW46Ym94Y25NUlJRSDZsTVNhQkVYWGh6RXpyaEtiXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+              src="../../static/assets/6.png"
               referrerpolicy="no-referrer" alt="img"></p>
           <p><span>m&gt;m.max=12 k&gt;(2+1+1+1+1)=6 n=34</span></p>
           <p><span>=&gt; m&gt;12; k&gt;6; n=34</span></p>
@@ -807,11 +738,11 @@
   <h3 id='状态转换树第十五题）'><span>状态转换树（第十五题）</span></h3>
   <p><span>分析或查阅得到正确的ATM的系统状态图，再基于state transition testing分析出transition tree，最后设计出逻辑测试用例。</span></p>
   <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NGIyMWMwMjdiN2Q1ODE5MWRiYmE5NjQ2MmM3MmIwOTRfbnA3U201eFZFeGZRN1I2WE5ocnRjb1JHa0QwbnEwSUVfVG9rZW46Ym94Y25Zc2V5ZERyMHhLOU5OOUlkQm5oMWppXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+      src="../../static/assets/7.png"
       referrerpolicy="no-referrer" alt="img"></p>
   <p>&nbsp;</p>
   <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=ZThmYTQ3YzViOGM2NzllZmNkMDQxZjJmY2E2NWVkMTlfdVRlREN1WEtidUx1NUFsbnF5TnUzMTI3dHhmc3AzT1NfVG9rZW46Ym94Y25RRExPQUlHWXNIOVNQMUJtYVM3SVNoXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+      src="../../static/assets/8.png"
       referrerpolicy="no-referrer" alt="img"></p>
   <p>&nbsp;</p>
   <h3 id='程序图第十六题）'><span>程序图（第十六题）</span></h3>
@@ -897,10 +828,10 @@
   </div>
   </pre>
   <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=OTM5NjViZGNiYmJmYjkwNjY1Y2EwM2E3OWJkMWQ4N2JfTzloMlNzQlpwSUZNd0ZiMWZFWUNSVDBHeDh6d3VsY29fVG9rZW46Ym94Y25rZjJObExYWElEQ0VqVjRPSXRPazJlXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+      src="../../static/assets/9.png"
       referrerpolicy="no-referrer" alt="img"></p>
   <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NDgyNzU4OTRlYTJiNzE4NTUyY2RhNjMwMGM5MGY2NWVfU0lQUm1kY2Z4N2hxQmVaVVRYUU5Cd21xME83VUhCdDFfVG9rZW46Ym94Y25Iamc0dklGdWVFZEdrUEJKMnJZYlRjXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+      src="../../static/assets/10.png"
       referrerpolicy="no-referrer" alt="img"></p>
   <h3 id='白盒测试第十七题）'><span>白盒测试（第十七题）</span></h3>
   <p>
@@ -963,7 +894,7 @@
   </div>
   </pre>
   <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NDEwNjEzNzJlOWJkOTJkZjM2Yzg5NDE2NDkxNGQ3YTdfbUVjVEp0aFg3aElWZVVpU3p3Z2JlRlhPVlY0N0tyelZfVG9rZW46Ym94Y240RTEwQldnT1R6d1YxU21ibXZ3ZG1lXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
+      src="../../static/assets/11.png"
       referrerpolicy="no-referrer" alt="img"></p>
   <p>&nbsp;</p>
   <p><span>根据题意设计流程图并设计测试用例实现白盒测试（White Box Test）的</span></p>
@@ -1169,60 +1100,42 @@
   </figure>
   <h2 id='实验题'><span>实验题</span></h2>
   <h3 id='三角形问题第一九题）'><span>三角形问题（第一、九题）</span></h3>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=OWE3YzliNmU5MGNmMjc1NjA2OTlmNDNhMTNkYTY3ZDJfRzlQOVBuTWVmd3ZBaUJjTVVKZEpaT2JvQzlOZ09OWWFfVG9rZW46Ym94Y25FWGNzRExlc05TQko3TzlmejRkT1VjXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <ol>
     <li>
       <h4 id='第一题）判断三角形类型用边界值分析和设计测试用例）'><span>（第一题）判断三角形类型（用边界值分析和设计测试用例）</span></h4>
     </li>
   </ol>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=YTA3YzI1NGZjNzc2NTIyMTQwZjA4OTExYjMyYTBjNzhfZTdvenZ4ak5GbElEYlI1TExDZGo3T1F1d3p6VjhJTEJfVG9rZW46Ym94Y243aG5QbUlzcVpsN0JWQmVuMUYxS3NmXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <ol>
     <li>
       <h4 id='第九题）判断三角形类型等价类方法分别分析和设计测试用例）'><span>（第九题）判断三角形类型（等价类方法分别分析和设计测试用例）</span></h4>
     </li>
   </ol>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MjM0Mjg5NTk3MWI2YWQ0MzQyMDhlMDNkYjY0MmI0MGZfVVIyZG4zT25oUVBaWTFRNEVqSXJVRnJUUFRLd1FVeWhfVG9rZW46Ym94Y25Hd1R4VHdxMkhoa24xOENvR1hvVml3XzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p>&nbsp;</p>
   <p>&nbsp;</p>
   <h3 id='万年历问题第二十十一题）'><span>万年历问题（第二、十、十一题）</span></h3>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=ZTk5MDVlMGNmOTU3MTQ0MmE3YTY5NzBmNjVmMDhmNWNfa2RzNERhVjlSWklUNFNRUmJGZ1pMeGhDS3ZjVG5SakFfVG9rZW46Ym94Y24wcHFzZmh1QmU4RktnWjBxNXZZdExiXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <ol>
     <li>
       <h4 id='第二题）万年历问题用边界值方法分别分析和设计测试用例）'><span>（第二题）万年历问题（用边界值方法分别分析和设计测试用例）</span></h4>
     </li>
   </ol>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MTcwZDQzYzkzOWIzNWYwMzY0NWRlNTdjOGQ4YTYzYzFfNGVHMFNOcnFOR3lZNkhjU2ZvMXZxSURDMW9JYWJkUnVfVG9rZW46Ym94Y25uT0czQXRIU3hkcXVJVnYyWXgycVNnXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <ol>
     <li>
       <h4 id='第十题）万年历问题等价类方法分别分析和设计测试用例）'><span>（第十题）万年历问题（等价类方法分别分析和设计测试用例）</span></h4>
     </li>
   </ol>
   <p><strong><span>强一般等价类</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MGE4ZmI5YTE0MDQ3OTg3NjA1MGQwOGNmZWY1YTYyZDZfQXo1cFZCU3NMdm9OMjg3alJ1NmIxbnNpdGFvS05YRUNfVG9rZW46Ym94Y25CYUVzUng2QzVsYUxucWxWdFdaOUNoXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+ 
   <p><strong><span>强健壮等价类</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=NTE4NzBmNzVjMjY3NDMyNWEyYjEzMTMwOGJkOTY1ZmVfTnlHVkdMTmk5TzVjcWNkREI3eWFWWTRkNlYxZUp0RUdfVG9rZW46Ym94Y241amdWUVZ4eW1HdFJRTVc4eDdoQlVmXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p><strong><span>弱一般等价类</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=OWMxNGM1NWMwYmE3MDliNTFmNjQwN2VlYmY3NjUyMjdfMG1Pd3VZclR4NmFnWlFMdkxZYThsb1B1eE42NTFjZG1fVG9rZW46Ym94Y25xRUdEaEhMeDc2d2VJREs4dkRFRWZnXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p><strong><span>弱健壮等价类</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=MDRhMWI5YmUxNGQxMjJiYTRjOGVjNGJlMGVlZWI1YzlfRldsbXFlY2Uxbks2aTVPa0ZUSWVjZEdBQ0RwWUlNRUFfVG9rZW46Ym94Y25GSjFkeTZSRWZ1NDlpSktOYTUyNG5lXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <ol>
     <li>
       <h4 id='第十一题）万年历问题用决策表设计测试用例将年份划分成非闰年被4整除不被100整除的闰年和被400整除的闰年）'>
@@ -1481,9 +1394,7 @@
   <p>
     <span>电脑销售系统，主机（25￥单位价格，每月最多销售的数量为70），显示器（30￥单位价格，每月最多销售数量为80），外设（45￥单位价格，每月最多销售的数量为90）；每个销售员每月至少销售一台完整的机器，当系统的主机这个变量接受到-1值的时候，系统自动统计该销售员本月的销售总额。当销售额小于等于1000（包括1000）按照10%提佣金，当销售额在1000-1800之间（包括1800）的时候按照15%提佣金，当销售额大于1800时按照20%提佣金。（用边界值方法分析和设计测试用例）</span>
   </p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=OTI1MDM2MTMwZGYyYWNiN2QyZjY5YWU1ODI5ODVhM2ZfNXpNRkV6SkVnZ3hQN012SGc3V0o5c3lxUldYcHgwUnVfVG9rZW46Ym94Y25tTWFobnNobktBRmg2blQ5QUVGbjllXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p>&nbsp;</p>
   <h3 id='收费问题第七题）'><span>收费问题（第七题）</span></h3>
   <p><span>研究一个与我们的生活息息相关的电信收费问题系统，需求描述如下：</span></p>
@@ -1533,17 +1444,11 @@
   </figure>
   <p><span>边界值，等价类和决策表设计测试用例，根据三种方法，最后设计出最优的一组测试用例集</span></p>
   <p><strong><span>边界值法：</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=ZWI1NGRkMDAxNmE5ZmI0YWFhZWNiNGNkM2RmNDlhN2RfZFVic0Y3YVZRTkcxU2g4QUZTejNHZmltajgzYm05RGlfVG9rZW46Ym94Y25Ka3hEZk5zUmZEbG9YZlZKVzBEeUFoXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p><strong><span>等价类法：</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=YjEyOTM0NWZlYjU2OGRiZDIwMDM0MGI5YTg3MGI4NjNfb2VpdU5tbkVuNndqQ09XM2tiSVNHaUNsYUJkRVZ4UFVfVG9rZW46Ym94Y25PV3BFcTdpd2VoYUFETHNHaGw3R3NoXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <p><strong><span>决策表法：</span></strong></p>
-  <p><img
-      src="https://thdpzzg0ip.feishu.cn/space/api/box/stream/download/asynccode/?code=N2QyMTI0OTQ4YjM4NWFhM2UzN2VkMzQwN2U3ODVkYzVfdExRY3BCTEpkdDNCR2o1clFCVURoc2pkckNUWWxZSXJfVG9rZW46Ym94Y241S2JrTVZDZnZXNFhTQXFveGRweW9iXzE2NTU4NzcwNzU6MTY1NTg4MDY3NV9WNA"
-      referrerpolicy="no-referrer" alt="img"></p>
+
   <h3 id='其他问题第六题）'><span>其他问题（第六题）</span></h3>
   <p><span>找一个项目（或软件工程课程项目）部署一下，分析边界值并设计测试用例执行之。</span></p>
   <p><em><span>见本项目小组的三大测试部分</span></em></p>
